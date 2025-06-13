@@ -4,6 +4,7 @@ def main():
     print(f"Output: {shorten(user_word)}")
 
 
+
 def shorten(word: str) -> str:
     VOWELS = {"a", "e", "i", "o", "u"}
     shortened_word_list = []
