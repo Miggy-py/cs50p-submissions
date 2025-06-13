@@ -1,14 +1,11 @@
 def main():
-    user_input = input("Input: ")
+    user_word = input("Input: ")
 
-    print("Output: ", end ="")
-
-    shortened_word = shorten(user_input)
-    print(shortened_word)
+    print(f"Output: {shorten(user_word)}")
 
 
 def shorten(word: str) -> str:
-    VOWELS = ["a", "e", "i", "o", "u"]
+    VOWELS = {"a", "e", "i", "o", "u"}
     shortened_word_list = []
 
     for char in word:
@@ -20,4 +17,3 @@ def shorten(word: str) -> str:
 
 if __name__ == "__main__":
     main()
-# test line
