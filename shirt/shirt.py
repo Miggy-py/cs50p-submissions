@@ -30,11 +30,8 @@ def get_files() -> Tuple[str, str]:
 def file_extensions_equals(before_path: str, after_path: str) -> bool:
     supported_extensions = {"jpg", "jpeg", "png"}
 
-    before_partitioned = before_path.rpartition(".")
-    after_partitioned = after_path.rpartition(".")
-
-    before_extension = before_partitioned[2].lower()
-    after_extension = after_partitioned[2].lower()
+    before_extension = before_path.rpartition(".")[2].lower()
+    after_extension = after_path.rpartition(".")[2].lower()
 
     if ((before_extension not in supported_extensions) or
         (after_extension not in supported_extensions)):
