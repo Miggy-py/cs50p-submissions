@@ -7,6 +7,7 @@ def main():
 
 
 def is_valid(s):
+    # maybe fix?
     if ((not s[0:2].isalpha()) or (len(s) < 2) or (len(s) > 6) or (not s[-1].isalnum())):
         return False
 
