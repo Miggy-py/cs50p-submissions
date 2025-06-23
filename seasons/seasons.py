@@ -40,7 +40,10 @@ def get_user_date() -> tuple[int, int, int]:
 
 def minutes_since(year: int, month: int, day: int) -> int:
     today = date.today()
-    users_date = date(year, month, day)
+    try:
+        users_date = date(year, month, day)
+    except ValueError:
+        sys.exit("Invalid date")
 
     return round((today - users_date).total_seconds() / 60)
 
